@@ -1,0 +1,18 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: $modal-overlay;
+  transition: opacity $transition-duration $transition-timing-function,
+    pointer-events $transition-duration $transition-timing-function,
+    visibility $transition-duration $transition-timing-function;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}

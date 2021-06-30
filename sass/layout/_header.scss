@@ -1,0 +1,112 @@
+.header {
+  border-bottom: 1px solid $border-color;
+}
+
+.header-container,
+.nav-list,
+.contact-list,
+.site-list {
+  @extend %alignmentflex;
+}
+
+.nav-list__logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  color: $black-color;
+}
+
+.nav-list__logo--accent-color {
+  color: $accent-color;
+}
+
+.site-list,
+.contact-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.contact-list {
+  margin-left: auto;
+}
+
+.site-list__item:not(:last-child),
+.contact-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-list__link,
+.contact-list__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $title-text-color;
+  transition: color $transition-duration, $transition-timing-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+  }
+}
+
+.site-list__link {
+  &::after {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $accent-color;
+
+    opacity: 0;
+    transform: scalex(0);
+    transform-origin: center left;
+    transition: opacity $transition-duration $transition-timing-function,
+      transform $transition-duration $transition-timing-function;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    opacity: 1;
+    transform: scalex(1);
+  }
+}
+
+.site-list__link--current {
+  position: relative;
+  color: $accent-color;
+  &::after {
+    opacity: 1;
+    transform: scalex(1);
+  }
+}
+
+.contact-list__link {
+  @extend %alignmentflex;
+  display: flex;
+  color: $primery-text-color;
+}
+
+.contact-list__e-mail-icon,
+.contact-list__smartphone-icon {
+  margin-right: 10px;
+}
+
+.contact-list__e-mail-icon {
+  @include icons(16px, 12px);
+}
+
+.contact-list__smartphone-icon {
+  @include icons(10px, 16px);
+}
