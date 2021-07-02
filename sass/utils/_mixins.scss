@@ -3,3 +3,11 @@
   height: $height;
   fill: currentColor;
 }
+
+@mixin font($size, $height, $spacing, $weight: 400, $align: left) {
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  font-weight: $weight;
+  text-align: $align;
+}
