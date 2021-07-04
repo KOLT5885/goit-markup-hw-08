@@ -141,7 +141,6 @@
 }
 
 .modal-form__label-checkbox {
-  @extend %alignmentflex;
   @include font(14px, 1.714, 0.03em, 400);
 
   font-style: normal;

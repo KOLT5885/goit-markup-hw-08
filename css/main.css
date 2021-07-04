@@ -54,7 +54,7 @@
 }
 
 .features-list__place-for-icon, .team-social-list, .team-social-list__link, .regular-customers-list__link, .footer-social-list,
-.footer-subscription__button, .footer-social-list__link, .portfolio-projects-list__overlay, .modal-button-close, .modal-form__label-checkbox, .modal-form__place-for-button {
+.footer-subscription__button, .footer-social-list__link, .portfolio-projects-list__overlay, .modal-button-close, .modal-form__place-for-button {
   display: flex;
   align-items: center;
   justify-content: center;
