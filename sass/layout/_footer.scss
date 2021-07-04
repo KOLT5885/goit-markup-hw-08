@@ -125,13 +125,6 @@
     text-align: left;
   }
 }
-.footer-subscription__button {
-  margin-top: 20px;
-
-  @media screen and(min-width: 1200px) {
-    margin-top: 0px;
-  }
-}
 
 .footer-social-list,
 .footer-subscription__button {
@@ -174,6 +167,7 @@
   height: 50px;
   width: 100%;
   padding: 15px 0px 15px 16px;
+  margin-bottom: 20px;
 
   border: 1px solid $subscription-border-color;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -193,6 +187,7 @@
   @media screen and(min-width: 1200px) {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0px;
   }
 
   &:focus {

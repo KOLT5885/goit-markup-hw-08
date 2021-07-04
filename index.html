@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,12 +15,12 @@
     <header class="header">
         <div class="container header-container">
             <a class="link logo header__logo" href="./index.html"><span class="header__logo--accent-color">Web</span>Studio</a>
-            <button type="button" class="menu-mobile__button open-menu">
+            <button type="button" class="menu-mobile__button open-menu" aria-expanded="false" aria-controls="menu" >
                 <svg class="menu-mobile__icon menu-mobile__icon--open-menu" width="40" height="40">
                     <use href="./images/symbol-defs.svg#icon-menu"></use>
                 </svg>
             </button>
-            <div class="menu is-hidden">
+            <div class="menu">
                 <button type="button" class="menu-mobile__button close-menu">
                     <svg class="menu-mobile__icon menu-mobile__icon--close-menu" width="40" height="40">
                         <use href="./images/symbol-defs.svg#icon-close_mobile-menu"></use>
@@ -40,7 +40,7 @@
                     </ul> 
                 </nav>
                 <ul class="contact-list list">
-                    <li class="contact-list__item">
+                    <li class="contact-list__item contact-list__mail">
                         <a href="mailto:info@devstudio.com" class="link contact-list__link">
                             <svg class="contact-list__e-mail-icon" width="16" height="12">
                                 <use href="./images/symbol-defs.svg#icon-e-mail"></use>
@@ -541,9 +541,9 @@
                     <svg class="modal-form__checkbox-icon" width="16" height="15">
                         <use href="./images/symbol-defs.svg#icon-modal-checkbox"></use>
                     </svg>
-                    <div class="modal-form__license">
+                    <spam class="modal-form__license">
                         Соглашаюсь с рассылкой и принимаю&#160;<a href="#" class="modal-link">Условия договора</a>
-                    </div>
+                    </spam>
                 </label>
                 <div class="modal-form__place-for-button">
                     <button type="submit" class="button modal-form__button-submit">
@@ -562,6 +562,10 @@
     <script src="./js/modal.js"></script>
     <!--скрипт для мобильного меню-->
     <script src="./js/mobile-menu.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
 
 </body>
 </html>

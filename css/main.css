@@ -216,10 +216,42 @@ p {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header-container.is-hidden {
+    width: 100vw;
+    max-width: none;
+  }
+}
+
 .menu {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    position: static;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 100%;
+  }
+}
+
+.menu.is-hidden {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -231,28 +263,9 @@ p {
   height: 100vh;
   background-color: #ffffff;
   z-index: 999;
-  transition: opacity, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .menu {
-    position: static;
-    justify-content: start;
-    flex-direction: row;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 100%;
-    z-index: 1;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .menu.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
+  opacity: 1;
+  pointer-events: auto;
+  overflow: visible;
 }
 
 .header__logo {
@@ -407,13 +420,22 @@ p {
 .contact-list {
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 64px;
   margin-top: auto;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.172;
   letter-spacing: 0.02em;
   font-weight: 500;
   text-align: left;
+}
+
+@media screen and (min-width: 480px) {
+  .contact-list {
+    font-size: 24px;
+    line-height: 1.172;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -424,10 +446,8 @@ p {
     font-weight: 500;
     text-align: left;
     flex-direction: column;
-    margin-bottom: 0px;
+    margin-top: 0px;
     margin-left: auto;
-    margin-top: 21px;
-    margin-bottom: 21px;
   }
 }
 
@@ -435,17 +455,30 @@ p {
   .contact-list {
     flex-direction: row;
     align-items: center;
+    margin-top: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
 .contact-list__tel {
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.172;
   letter-spacing: 0.02em;
   font-weight: 500;
   text-align: left;
   color: #2196f3;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 480px) {
+  .contact-list__tel {
+    font-size: 34px;
+    line-height: 1.172;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -456,7 +489,7 @@ p {
     font-weight: 500;
     text-align: left;
     color: currentColor;
-    margin-bottom: 0px;
+    margin-bottom: 21px;
     margin-top: 10px;
   }
 }
@@ -465,6 +498,19 @@ p {
   .contact-list__tel {
     margin-top: 0px;
     margin-left: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-list__mail {
+    margin-top: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list__mail {
+    margin-top: 0px;
   }
 }
 
@@ -531,6 +577,7 @@ p {
 .header-social {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 64px;
 }
 
 @media screen and (min-width: 768px) {
@@ -541,11 +588,22 @@ p {
 
 .header-social__item {
   display: flex;
-  font-size: 18px;
+  align-items: center;
+  font-size: 10px;
   line-height: 1.222;
   letter-spacing: 0.02em;
   font-weight: 500;
   text-align: left;
+}
+
+@media screen and (min-width: 480px) {
+  .header-social__item {
+    font-size: 18px;
+    line-height: 1.222;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    text-align: left;
+  }
 }
 
 .header-social__item:not(:first-child):before {
@@ -1106,16 +1164,6 @@ p {
   }
 }
 
-.footer-subscription__button {
-  margin-top: 20px;
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-subscription__button {
-    margin-top: 0px;
-  }
-}
-
 .footer-social-list__item {
   width: 44px;
   height: 44px;
@@ -1149,6 +1197,7 @@ p {
   height: 50px;
   width: 100%;
   padding: 15px 0px 15px 16px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -1173,6 +1222,7 @@ p {
   .footer-subscription__email-input {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0px;
   }
 }
 
@@ -1189,7 +1239,7 @@ p {
 
 .portfolio {
   padding-top: 60px;
-  padding-bottom: 60pox;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
