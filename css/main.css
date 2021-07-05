@@ -228,7 +228,6 @@ p {
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
   width: 100%;
 }
 
@@ -237,6 +236,7 @@ p {
     opacity: 0;
     pointer-events: none;
     overflow: hidden;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -373,7 +373,7 @@ p {
   color: #212121;
   margin-bottom: 32px;
   color: #212121;
-  transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
@@ -456,8 +456,6 @@ p {
     flex-direction: row;
     align-items: center;
     margin-top: 0px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -483,14 +481,16 @@ p {
 
 @media screen and (min-width: 768px) {
   .contact-list__tel {
+    color: currentColor;
     font-size: 12px;
     line-height: 1.172;
     letter-spacing: 0.02em;
     font-weight: 500;
     text-align: left;
     color: currentColor;
-    margin-bottom: 21px;
-    margin-top: 10px;
+    padding-bottom: 21px;
+    padding-top: 10px;
+    margin-bottom: 0px;
   }
 }
 
@@ -502,20 +502,24 @@ p {
   }
 }
 
+.contact-list__mail {
+  color: currentColor;
+}
+
 @media screen and (min-width: 768px) {
   .contact-list__mail {
-    margin-top: 21px;
+    padding-top: 21px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contact-list__mail {
-    margin-top: 0px;
+    padding-top: 0px;
   }
 }
 
 .contact-list__link {
-  color: currentColor;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -525,6 +529,13 @@ p {
   }
   .contact-list__link:hover, .contact-list__link:focus, .contact-list__link:active {
     color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -628,6 +639,7 @@ p {
   padding-top: 118px;
   padding-bottom: 118px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/hero-m.jpg");
+  background-size: cover;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1553,6 +1565,7 @@ p {
   letter-spacing: 0.03em;
   font-weight: 400;
   text-align: left;
+  display: block;
   font-style: normal;
   margin-bottom: 30px;
 }

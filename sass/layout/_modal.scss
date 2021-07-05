@@ -142,7 +142,7 @@
 
 .modal-form__label-checkbox {
   @include font(14px, 1.714, 0.03em, 400);
-
+  display: block;
   font-style: normal;
   margin-bottom: 30px;
 }

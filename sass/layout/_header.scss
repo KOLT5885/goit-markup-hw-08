@@ -23,7 +23,6 @@
   left: 0;
 
   display: flex;
-  align-items: center;
 
   width: 100%;
 
@@ -31,6 +30,7 @@
     opacity: 0;
     pointer-events: none;
     overflow: hidden;
+    transition: opacity $transition-duration $transition-timing-function;
   }
   @media screen and(min-width: 768px) {
     position: static;
@@ -138,7 +138,7 @@
   color: $title-text-color;
   margin-bottom: 32px;
   color: $title-text-color;
-  transition: color $transition-duration, $transition-timing-function;
+  transition: color $transition-duration $transition-timing-function;
 
   @media screen and(min-width: 768px) {
     margin-bottom: 0px;
@@ -207,8 +207,6 @@
     flex-direction: row;
     align-items: center;
     margin-top: 0px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -221,10 +219,12 @@
     @include font(34px, 1.172, 0.02em, 500, left);
   }
   @media screen and(min-width: 768px) {
+    color: currentColor;
     @include font(12px, 1.172, 0.02em, 500, left);
     color: currentColor;
-    margin-bottom: 21px;
-    margin-top: 10px;
+    padding-bottom: 21px;
+    padding-top: 10px;
+    margin-bottom: 0px;
   }
   @media screen and(min-width: 1200px) {
     margin-top: 0px;
@@ -234,16 +234,18 @@
 }
 
 .contact-list__mail {
+  color: currentColor;
+
   @media screen and(min-width: 768px) {
-    margin-top: 21px;
+    padding-top: 21px;
   }
   @media screen and(min-width: 1200px) {
-    margin-top: 0px;
+    padding-top: 0px;
   }
 }
 
 .contact-list__link {
-  color: currentColor;
+  display: block;
   @media screen and(min-width: 768px) {
     display: flex;
     align-items: center;
@@ -252,6 +254,10 @@
     &:active {
       color: $accent-color;
     }
+  }
+  @media screen and(min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
