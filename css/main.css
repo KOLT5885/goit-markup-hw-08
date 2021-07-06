@@ -243,11 +243,14 @@ p {
 @media screen and (min-width: 768px) {
   .menu {
     position: static;
+    justify-content: flex-start;
+    flex-direction: row;
     padding-right: 0px;
     padding-left: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 100%;
+    z-index: 1;
   }
 }
 
@@ -274,7 +277,7 @@ p {
   letter-spacing: 0.03em;
   font-weight: 700;
   text-align: left;
-  display: blok;
+  display: block;
   padding-top: 16px;
   padding-bottom: 16px;
   color: #000000;
@@ -638,6 +641,8 @@ p {
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
+  background-repeat: repeat;
+  background-position: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header/hero-m.jpg");
   background-size: cover;
 }
@@ -1264,7 +1269,6 @@ p {
 .portfolio-filters-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: -15px;
   margin-left: -8px;
 }
